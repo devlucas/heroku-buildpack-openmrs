@@ -10,7 +10,7 @@ config_vars:
   JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
   MAVEN_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops 
 addons:
-  - cleardb:drift
+  - cleardb:scream
 default_process_types:
   web:      java \$JAVA_OPTS -jar package/target/dependency/webapp-runner.jar --port \$PORT --path /openmrs --expand-war package/target/distro/*.war
 EOF
